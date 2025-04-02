@@ -29,6 +29,8 @@
     "firewalljk30-sdk": "^1.0.0",
     "firewalljk31-sdk": "^1.0.0",
     "firewalljk8-sdk": "^1.0.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
     "proto": "file:",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

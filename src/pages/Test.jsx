@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from "axios";
+const API_KEY = import.meta.env.VITE_APP_FIREWALL_API_KEY;
+const APP_ID = import.meta.env.VITE_APP_FIREWALL_APP_ID;
 
 const Test = () => {
 

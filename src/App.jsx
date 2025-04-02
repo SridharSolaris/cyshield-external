@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { setConfig, ProtectedPage, setupAxiosInterceptors } from "firewalljk31-sdk"; // Ensure correct import path
-import Hello from "./pages/Home";
 import Navbar from "./Navbar";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Test from "./pages/Test";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import axios from "axios"; // Use the default Axios instance
+import Home from "./pages/Home";
 
 // Retrieve firewall configurations
 const API_KEY = import.meta.env.VITE_APP_FIREWALL_API_KEY;
@@ -29,7 +29,6 @@ function App() {
     setupAxiosInterceptors(axios);
   }, [APP_ID, API_KEY]);
 
-  // Function to make an API request
 
 
   return (
@@ -39,7 +38,7 @@ function App() {
           <Navbar />
           <div className="container mx-auto mt-8">
             <Routes>
-              <Route path="/home" element={<Hello />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/test-api" element={<Test />} />
               <Route path="/signup" element={<Signup />} />
@@ -47,7 +46,6 @@ function App() {
             </Routes>
             <h1>Protected Content</h1>
             <p>This content is protected by the firewall SDK.</p>
-
           </div>
         </ProtectedPage>
       </BrowserRouter>
