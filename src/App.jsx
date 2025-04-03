@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { setConfig, ProtectedPage, setupAxiosInterceptors } from "firewalljk31-sdk"; // Ensure correct import path
+import { setConfig, ProtectedPage, setupAxiosInterceptors } from "cyshield-sdk"; // Ensure correct import path
 import Navbar from "./Navbar";
 import Login from './pages/Login';
 import Signup from './pages/Signup';

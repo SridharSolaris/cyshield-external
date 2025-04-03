@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "cyshield-sdk": "^1.0.0",
     "dotenv": "^16.4.7",
     "firewalljk12-sdk": "^1.0.2",
     "firewalljk13-sdk": "^1.0.2",
