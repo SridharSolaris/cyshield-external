@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { setConfig, ProtectedPage, setupAxiosInterceptors } from "cyshield-sdk"; // Ensure correct import path
+import { setConfig, ProtectedPage } from "cyshield-sdk"; // Ensure correct import path
 import Navbar from "./Navbar";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -19,6 +19,7 @@ if (!API_KEY || !APP_ID) {
 function App() {
   useEffect(() => {
     setConfig({
+      FIREWALL_API_URL: import.meta.env.VITE_FIREWALL_API_URL,
       API_KEY,
       APP_ID,
       CUSTOM_HEADERS: { "x-source": "external-web-app" },
@@ -26,7 +27,7 @@ function App() {
     });
 
     // Set up interceptors on the default Axios instance
-    setupAxiosInterceptors(axios);
+
   }, [APP_ID, API_KEY]);
 
 
