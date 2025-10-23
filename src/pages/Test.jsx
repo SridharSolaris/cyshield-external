@@ -35,7 +35,6 @@ const Test = () => {
                         "Content-Type": "application/json",
                         "x-api-key": API_KEY,
                         "x-app-id": APP_ID,
-                        "x-sdk-request": "true",
                     },
                 }
             );

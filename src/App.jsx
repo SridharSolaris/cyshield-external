@@ -22,12 +22,10 @@ function App() {
       FIREWALL_API_URL: import.meta.env.VITE_FIREWALL_API_URL,
       API_KEY,
       APP_ID,
+      DEBUG: true,
       CUSTOM_HEADERS: { "x-source": "external-web-app" },
       REALTIME_MONITORING: true, // Set to true if real-time monitoring is required
     });
-
-    // Set up interceptors on the default Axios instance
-
   }, [APP_ID, API_KEY]);
 
 
